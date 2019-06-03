@@ -44,15 +44,15 @@ class PrintPrimeNumberTable {
 	    $count = 0;
 	    while ($count < $maxPrimeNumber )  
 	    {  
-		    $div_count=0;  
+		    $keepCount = 0;  
 		    for ( $i=1; $i<=$num; $i++) {  
-			    if (( $num%$i )==0) {  
-				    $div_count++;  
+			    if (( $num % $i )==0) {  
+				    $keepCount++;  
 			    }  
 		    }  
-		    if ($div_count < 3) {  
+		    if ($keepCount < 3) {  
 			    $pNumbers[] = $num;  
-			    $count=$count+1;  
+			    $count = $count+1;  
 		    }  
 		    $num = $num+1;  
 	    }  
