@@ -2,7 +2,12 @@
 
 class PrintPrimeNumberTable {
 
-
+        /**
+         * Get getPrimeNumbersTable for given number
+         *
+         * 
+         * @return string
+         */
 	public function getPrimeNumbersTable()
 	{
 		if ($_SERVER['argc'] != 3 ) {
@@ -16,6 +21,7 @@ class PrintPrimeNumberTable {
 				return;					
 			}
 		}		
+            //Get getPrimeNumbersList for given number
 	    $primeNumbers = $this->getPrimeNumbersList($givenNumber);
 	    foreach ($primeNumbers as $num) {
 		    print " | ". "$num ";
@@ -32,7 +38,14 @@ class PrintPrimeNumberTable {
 			echo "\n";
 		}
 
-	}	
+	}
+	
+  	/**
+         * Get getPrimeNumbersList for given number
+         *
+         * 
+         * @return array
+         */	
 	public function getPrimeNumbersList(int $maxPrimeNumber) : array
 	{
 	    if ($maxPrimeNumber <= 0 ) {
